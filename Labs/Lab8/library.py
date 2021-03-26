@@ -23,17 +23,17 @@ class Library:
         while user_input != 7:
             print("\nWelcome to the Library!")
             print("-----------------------")
-            print("1. Display all books")
-            print("2. Check Out a book")
-            print("3. Return a book")
-            print("4. Find a book")
-            print("5. Add a book")
-            print("6. Remove a book")
+            print("1. Display all items")
+            print("2. Check Out an item")
+            print("3. Return an item")
+            print("4. Find an item")
+            print("5. Add an item")
+            print("6. Remove an item")
             print("7. Quit")
             string_input = input("Please enter your choice (1-7)")
 
-            #handle user pressing only enter in menu
-            if(string_input == ''):
+            # handle user pressing only enter in menu
+            if string_input == '':
                 continue
 
             user_input = int(string_input)

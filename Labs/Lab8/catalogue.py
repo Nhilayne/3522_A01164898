@@ -1,7 +1,7 @@
 import difflib
-
 from libraryitemgenerator import LibraryItemGenerator
-from item import Item
+
+
 class Catalogue:
     def __init__(self, item_list):
         self._item_list = item_list
