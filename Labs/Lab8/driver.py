@@ -1,16 +1,17 @@
 from library import Library
 from book import Book
 
+
 def generate_test_books():
     """
     Return a list of books with dummy data.
     :return: a list
     """
     book_list = [
-        Book("Harry Potter 1", "J K Rowling", "100.200.300", 2),
-        Book("Harry Potter 2", "J K Rowling", "999.224.854", 5),
-        Book("Harry Potter 3", "J K Rowling", "631.495.302", 4),
-        Book("The Cat in the Hat", "Dr. Seuss", "123.02.204", 1)
+        Book(title="Harry Potter 1", author="J K Rowling", call_num="100.200.300", num_copies=2),
+        Book(title="Harry Potter 2", author="J K Rowling", call_num="999.224.854", num_copies=5),
+        Book(title="Harry Potter 3", author="J K Rowling", call_num="631.495.302", num_copies=4),
+        Book(title="The Cat in the Hat", author="Dr. Seuss", call_num="123.02.204", num_copies=1)
     ]
     return book_list
 

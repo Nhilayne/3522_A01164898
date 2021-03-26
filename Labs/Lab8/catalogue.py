@@ -59,9 +59,7 @@ class Catalogue:
         :param title: a string
         :return: a list of titles.
         """
-        title_list = []
-        for library_item in self._item_list:
-            title_list.append(library_item.get_title())
+        title_list = [item.get_title() for item in self._item_list]
         results = difflib.get_close_matches(title, title_list,
                                             cutoff=0.5)
         return results
@@ -104,9 +102,7 @@ class Catalogue:
         """
         print("\nItem List")
         print("--------------", end="\n\n")
-        for library_item in self._item_list:
-            print(library_item)
-            print()
+        print(*[item.__str__() for item in self._item_list], sep='\n\n')
 
     def reduce_item_count(self, call_number):
         """

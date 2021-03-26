@@ -54,8 +54,7 @@ class Library:
                 found_titles = self._catalogue.find_items(input_title)
                 print("We found the following:")
                 if len(found_titles) > 0:
-                    for title in found_titles:
-                        print(title)
+                    print(*[title for title in found_titles], sep='\n')
                 else:
                     print("Sorry! We found nothing with that title")
 
