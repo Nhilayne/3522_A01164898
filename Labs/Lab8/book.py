@@ -7,7 +7,7 @@ class Book(Item):
     it's call number.
     """
 
-    def __init__(self, title, author, call_num, num_copies):
+    def __init__(self, **book):
         """
         :param call_num: a string
         :param title: a string
@@ -16,10 +16,10 @@ class Book(Item):
         :precondition call_num: a unique identifier
         :precondition num_copies: a positive integer
         """
-        self._title = title
-        self._author = author
-        self._call_num = call_num
-        self._num_copies = num_copies
+        self._title = book['title']
+        self._author = book['author']
+        self._call_num = book['call_num']
+        self._num_copies = book['num_copies']
 
     def get_author(self):
         return self._author.author()

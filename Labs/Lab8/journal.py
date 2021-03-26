@@ -2,12 +2,12 @@ from item import Item
 
 
 class Journal(Item):
-    def __init__(self, title, issue_number, publisher, call_num, num_copies):
-        self._issue_number = issue_number
-        self._publisher = publisher
-        self._title = title
-        self._call_num = call_num
-        self._num_copies = num_copies
+    def __init__(self, **journal):
+        self._issue_number = journal['issue_number']
+        self._publisher = journal['publisher']
+        self._title = journal['title']
+        self._call_num = journal['call_num']
+        self._num_copies = journal['num_copies']
 
     def get_publisher(self):
         return self._publisher.publisher()

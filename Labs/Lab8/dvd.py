@@ -2,12 +2,12 @@ from item import Item
 
 
 class DVD(Item):
-    def __init__(self, title, date, region, call_num, num_copies):
-        self._release_date = date
-        self._region_code = region
-        self._title = title
-        self._call_num = call_num
-        self._num_copies = num_copies
+    def __init__(self, **dvd):
+        self._release_date = dvd['date']
+        self._region_code = dvd['region']
+        self._title = dvd['title']
+        self._call_num = dvd['call_num']
+        self._num_copies = dvd['num_copies']
 
     def get_release_date(self):
         return self._release_date.release_date()
