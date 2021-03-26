@@ -9,7 +9,7 @@ class Library:
     """
     def __init__(self, catalogue):
         """
-        Intialize the library with a list of books.
+        Initialize the library with a list of books.
         :param catalogue: a list of item objects to create catalogue from.
         """
         self._catalogue = Catalogue(catalogue)

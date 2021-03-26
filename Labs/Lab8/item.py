@@ -14,16 +14,14 @@ class Item(ABC):
     @abstractmethod
     def increment_number_of_copies(self):
         """
-        Set's the number of copies of an book
-        :param value: a positive integer
+        Increments the number of copies of an item by 1
         """
         pass
 
     @abstractmethod
     def decrement_number_of_copies(self):
         """
-        Set's the number of copies of an book
-        :param value: a positive integer
+        Decrements the number of copies of an item by 1
         """
         pass
 
@@ -58,15 +56,3 @@ class Item(ABC):
         :return:
         """
         pass
-
-    # @call_number.setter
-    # def call_number(self, value):
-    #     """
-    #     This is the decorator way to create a SET property. This would
-    #     allow us to invoke this method by simply saying
-    #     my_book.call_number = "102.345.992". I've commented this out
-    #     since call numbers should not need a setter.
-    #     :param value: a string
-    #     :precondition value: a unique call number identifier
-    #     """
-    #     self._call_num = value

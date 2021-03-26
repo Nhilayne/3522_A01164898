@@ -24,8 +24,6 @@ class Catalogue:
             print(f"No copies left for call number {call_number}"
                   f". Checkout failed.")
 
-
-
     def return_item(self, call_number):
         """
         Return an item with the given call number from the library.
@@ -78,9 +76,6 @@ class Catalogue:
             self._item_list.append(new_item)
             print("Item added successfully! Item details:")
             print(new_item)
-
-
-
 
     def remove_item(self, call_number):
         """
