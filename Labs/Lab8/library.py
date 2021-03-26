@@ -30,7 +30,7 @@ class Library:
             print("5. Add an item")
             print("6. Remove an item")
             print("7. Quit")
-            string_input = input("Please enter your choice (1-7)")
+            string_input = input("Please enter your choice (1-7)\n")
 
             # handle user pressing only enter in menu
             if string_input == '':
@@ -40,17 +40,17 @@ class Library:
 
             if user_input == 1:
                 self._catalogue.display_available_item()
-                user_input = input("Press Enter to continue")
+                user_input = input("Press Enter to continue\n")
             elif user_input == 2:
                 call_number = input("Enter the call number of the book"
-                                    " you wish to check out.")
+                                    " you wish to check out.\n")
                 self._catalogue.check_out(call_number)
             elif user_input == 3:
                 call_number = input("Enter the call number of the book"
-                                    " you wish to return.")
+                                    " you wish to return.\n")
                 self._catalogue.return_item(call_number)
             elif user_input == 4:
-                input_title = input("Enter the title of the book:")
+                input_title = input("Enter the title of the book.\n")
                 found_titles = self._catalogue.find_items(input_title)
                 print("We found the following:")
                 if len(found_titles) > 0:
@@ -62,7 +62,7 @@ class Library:
                 self._catalogue.add_item()
 
             elif user_input == 6:
-                call_number = input("Enter the call number of the book")
+                call_number = input("Enter the call number of the book\n")
                 self._catalogue.remove_item(call_number)
 
             elif user_input == 7:
