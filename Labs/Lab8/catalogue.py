@@ -68,14 +68,17 @@ class Catalogue:
         """
         item_gen = LibraryItemGenerator()
         new_item = item_gen.create_item()
-        found_item = self._retrieve_item_by_call_number(new_item.call_number)
-        if found_item:
-            print(f"Could not add item with call number "
-                  f"{new_item.call_number}. It already exists. ")
-        else:
-            self._item_list.append(new_item)
-            print("Item added successfully! Item details:")
+        if new_item == "invalid input given":
             print(new_item)
+        else:
+            found_item = self._retrieve_item_by_call_number(new_item.call_number)
+            if found_item:
+                print(f"Could not add item with call number "
+                      f"{new_item.call_number}. It already exists. ")
+            else:
+                self._item_list.append(new_item)
+                print("Item added successfully! Item details:")
+                print(new_item)
 
     def remove_item(self, call_number):
         """
